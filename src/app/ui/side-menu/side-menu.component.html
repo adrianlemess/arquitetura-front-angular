@@ -1,0 +1,13 @@
+<div class="sidebar" *ngIf="menuItens">
+  <div class="nav-link" *ngIf="menuItens && menuItens.length > 0">
+    <h2> Movies </h2>
+    <div *ngFor="let item of menuItens; let i = index" [id]="i" class="d-flex align-items-center justify-content-center menu-item">
+      <a
+        [routerLink]="item.routerLink"
+        [queryParams]="item.queryParams"
+        [routerLinkActive]="['active']">
+          {{ item.label }}
+      </a>
+    </div>
+  </div>
+</div>

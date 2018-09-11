@@ -1,0 +1,25 @@
+<app-section
+[titlePrimary]="selectedFilm?.CompleteName"
+titleSecondary="Opening Crawl">
+
+<div class="father-container" >
+    <section class="intro">
+        A long time ago, in a galaxy far,<br> far away....
+      </section>
+    <img alt="logo-star-wars" src="../../../assets/logo.svg" class="logo" />
+
+    <div id="board">
+      <div id="content">
+        <p id="title">Episode {{ selectedFilm?.getEpisodeInRoman()}}</p>
+        <p id="subtitle">{{ selectedFilm?.title }}</p>
+        <br>
+        <p>{{ selectedFilm?.openingCrawl }}</p>
+      </div>
+    </div>
+</div>
+
+<audio preload="auto" autoplay>
+  <source src="../../../assets/starwars-theme.mp3" type="audio/mpeg">
+  </audio>
+
+</app-section>

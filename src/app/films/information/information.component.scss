@@ -1,0 +1,22 @@
+@import '../../../scss/mixins.scss';
+
+ul.container {
+  margin-top: 50px !important;
+  padding: 0 !important;
+  @include drop-shadow();
+
+  li {
+    label {
+      margin-right: 10px;
+    }
+    padding: 10px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
+    &>div {
+      &:last-child {
+        font-weight: bold; // width: 30%;
+        border: none;
+      }
+    }
+  }
+}
+

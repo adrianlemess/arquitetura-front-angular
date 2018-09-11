@@ -1,0 +1,30 @@
+<app-section
+  titlePrimary="{{ selectedFilm?.CompleteName }}"
+  titleSecondary="Characters">
+  <ul class="container" *ngFor="let character of characters">
+    <li class="d-flex flex-row justify-content-between">
+      <label>Name: </label>
+      <div id="name">
+        {{ character?.name }}
+      </div>
+    </li>
+    <li  class="d-flex flex-row justify-content-between">
+      <label>Gender:</label>
+      <div id="gender">
+        {{ character?.gender }}
+      </div>
+    </li>
+    <li class="d-flex flex-row justify-content-between">
+      <label>Skin Color: </label>
+      <div id="skin-color">
+        {{ character?.skinColor }}
+      </div>
+    </li>
+    <li class="d-flex flex-row justify-content-between">
+      <label>Director: </label>
+      <div id="eye-color">
+        {{ character?.eyeColor }}
+      </div>
+    </li>
+  </ul>
+</app-section>

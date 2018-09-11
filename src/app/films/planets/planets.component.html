@@ -1,0 +1,42 @@
+<app-section
+titlePrimary="{{ selectedFilm?.CompleteName }}"
+titleSecondary="Planets">
+<ul class="container" *ngFor="let planet of planets">
+  <li class="d-flex flex-row justify-content-between">
+    <label>Climate: </label>
+    <div id="climate">
+      {{ planet?.climate }}
+    </div>
+  </li>
+  <li class="d-flex flex-row justify-content-between">
+    <label>Name: </label>
+    <div id="name">
+      {{ planet?.name }}
+    </div>
+  </li>
+  <li  class="d-flex flex-row justify-content-between">
+    <label>Gravity:</label>
+    <div id="gravity">
+      {{ planet?.gravity}}
+    </div>
+  </li>
+  <li class="d-flex flex-row justify-content-between">
+    <label>Orbital Period: </label>
+    <div id="orbital-period">
+      {{ planet?.orbitalPeriod }}
+    </div>
+  </li>
+  <li class="d-flex flex-row justify-content-between">
+    <label>Terrain: </label>
+    <div id="terrain">
+      {{ planet?.terrain }}
+    </div>
+  </li>
+  <li class="d-flex flex-row justify-content-between">
+      <label>Population: </label>
+      <div id="population">
+        {{ planet?.population }}
+      </div>
+    </li>
+</ul>
+</app-section>

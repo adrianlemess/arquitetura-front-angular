@@ -1,0 +1,26 @@
+<app-section
+  titlePrimary="{{ (filmState$ | async).selectedFilm?.CompleteName }}"
+  titleSecondary="Informations">
+  <ul class="container">
+
+    <li class="d-flex flex-row justify-content-between">
+      <label>Producer:</label>
+      <div id="producer">
+        {{ ( filmState$ | async).selectedFilm?.producer }}
+      </div>
+    </li>
+    <li class="d-flex flex-row justify-content-between">
+      <label>Director: </label>
+      <div id="producer">
+        {{ ( filmState$ | async).selectedFilm?.director }}
+      </div>
+    </li>
+
+    <li class="d-flex flex-row justify-content-between">
+      <label>Release Date: </label>
+      <div id="release_date">
+        {{ ( filmState$ | async).selectedFilm?.releaseDate | date: 'dd/MM/yyyy' }}
+      </div>
+    </li>
+  </ul>
+</app-section>

@@ -1,0 +1,57 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/mixins.scss';
+
+.sidebar {
+  height: 100%;
+  width: $sidebarWidth;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  color: white;
+  overflow-x: hidden;
+  padding-top: 25px;
+  background: transparent url('./../../../assets/background-stars.jpg') top right;
+  background-size: 300px auto;
+  box-shadow: 2px 0px 8px #555;
+  text-align:center;
+  .nav-link {
+    padding: 0;
+    h2 {
+      margin-left: 10px;
+      color: $title-reverse;
+      margin-bottom: 20px;
+    }
+    margin-top: 30%;
+    & .menu-item{
+      border-top: 2px solid $secondary-menu-color;
+      &:last-child {
+        border-bottom: 2px solid $secondary-menu-color;
+      }
+      width: 100%;
+      a {
+        padding: 15px 5px 15px 5px;
+        text-decoration: none;
+        font-size: 1.2em;
+        color: $secondary-menu-color;
+        display: block;
+
+        &:hover {
+          color: rgb(255, 255, 255);
+          background: $menu-selected-background;
+          @include filter(50);
+          border-radius: 5%;
+          width: 100%;
+        }
+
+        &.active {
+          color: rgb(255, 255, 255);
+          background: $menu-selected-background;
+          @include filter(50);
+          border-radius: 5%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

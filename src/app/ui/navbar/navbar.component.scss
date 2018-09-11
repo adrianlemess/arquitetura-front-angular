@@ -1,0 +1,41 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/mixins.scss';
+
+.navbar {
+  margin-left: $sidebarWidth;
+  margin-top: 1px;
+  z-index: 2;
+  color: white;
+  background-image: linear-gradient(to left, $header-color-secondary, $header-color);
+  border-top: 3px solid $divider-color;
+  border-bottom: 3px solid $divider-color;
+  @include drop-shadow(rgba(0, 0, 0, 0.1));
+  & .navbar-nav {
+    width: 100%;
+    & .nav-item {
+      i {
+        font-size: 1.5em;
+      }
+      padding: 15px 5px 15px 5px;
+      font-size: 1.2em;
+      color: rgb(255, 255, 255);
+      display: block;
+      @include filter(50);
+      a {
+        text-decoration: none;
+        &:hover {
+          color: rgb(255, 255, 255);
+          border-radius: 5%;
+          width: 100%;
+        }
+
+        &.active {
+          color: rgb(255, 255, 255);
+          border-radius: 5%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+}

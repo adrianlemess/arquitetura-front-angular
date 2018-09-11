@@ -1,0 +1,89 @@
+@import './variables';
+@mixin section-form-width() {
+  display: block;
+  width: 100%;
+  max-width: $card-max-width;
+}
+
+@mixin reset-host() {
+  display: block;
+  width: 100%; // Conteúdo da Regra personalizada
+}
+
+@mixin default-host() {
+  :host {
+    @media (min-width: 993px) {
+      .container {
+        font-size: 1.4em;
+        padding: 0 5%;
+        margin-left: $sidebarWidth;
+        max-width: 100% - $sidebarWidth;
+      }
+    }
+    @media (max-width: 992px){
+      .container {
+        font-size: 1.2em;
+        padding: 0 4%;
+        margin-left: $sidebarWidth;
+        max-width: 100% - $sidebarWidth;
+      }
+    }
+    @media (max-width: 768px) {
+      .container {
+        margin-left: $sidebarWidth;
+        font-size: 1em;
+        padding: 0 3%;
+        max-width:  100% - $sidebarWidth;
+      }
+    }
+    @media (max-width: 576px) {
+      .container {
+        font-size: 0.8em;
+        padding: 0 2%;
+        margin-left: $sidebarWidth;
+        max-width:  100% - $sidebarWidth;
+      }
+    }
+    @content;
+  }
+}
+
+//Valores de $overflow: clip, ellipsis, or a string
+@mixin truncateText($overflow: ellipsis) {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: $overflow;
+}
+
+@mixin drop-shadow($color: rgba(0, 0, 0, .25)) {
+  filter: drop-shadow(1px 1px 1px $color);
+}
+
+@mixin filter($opacity) {
+  filter:alpha(opacity=$opacity);
+  -moz-opacity:$opacity / 100;
+  -khtml-opacity: $opacity / 100;
+  opacity: $opacity / 100;
+}
+
+@mixin fix-container($margin:2px) {
+  display: block;
+  margin: 0;
+  margin-top: $margin;
+  margin-bottom: $margin;
+}
+
+@mixin user-select-none() {
+  /* Chrome all / Safari all */
+  -webkit-user-select: none;
+  /* Firefox all */
+  -moz-user-select: none;
+  /* IE 10+ */
+  -ms-user-select: none;
+  /* Likely future */
+  user-select: none;
+}
+
+@mixin transition($time: 0.385s, $type: linear) {
+  transition: all $type $time;
+}

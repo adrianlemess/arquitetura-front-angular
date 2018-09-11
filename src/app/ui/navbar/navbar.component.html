@@ -1,0 +1,12 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" *ngIf="menuItens && menuItens.length > 0">
+    <ul class="navbar-nav d-flex justify-content-center">
+      <li class="nav-item d-flex justify-content-between align-items-center" *ngFor="let item of menuItens">
+        <i [class]="item.icon"></i>
+        <a
+          class="nav-link"
+          [routerLink]="item.routerLink"
+          [routerLinkActive]="['active']"
+        >{{ item.label }}</a>
+      </li>
+    </ul>
+</nav>

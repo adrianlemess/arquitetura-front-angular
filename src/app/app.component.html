@@ -1,0 +1,8 @@
+<app-layout-base
+    [sideMenuItens]="menuItens"
+    [navbarMenuItens]="navbarMenuItens"
+>
+   <router-outlet *ngIf="!loadingGlobal"></router-outlet>
+</app-layout-base>
+
+<app-loading *ngIf="loading" overlay='true' [visible]='loading'></app-loading>

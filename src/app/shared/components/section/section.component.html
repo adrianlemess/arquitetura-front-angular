@@ -1,0 +1,7 @@
+<section class="container section">
+  <h1 *ngIf="titlePrimary" [title]="titlePrimary" class="section-titlePrimary"> {{ titlePrimary }}</h1>
+  <h3 *ngIf="titleSecondary" class="section-titleSecondary"> {{ titleSecondary }}</h3>
+  <div class="section-content">
+      <ng-content></ng-content>
+  </div>
+</section>

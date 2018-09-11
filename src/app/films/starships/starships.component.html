@@ -1,0 +1,36 @@
+<app-section
+titlePrimary="{{ selectedFilm?.CompleteName }}"
+titleSecondary="Starships">
+<ul class="container" *ngFor="let starship of starships">
+  <li class="d-flex flex-row justify-content-between">
+    <label>Model: </label>
+    <div id="model">
+      {{ starship?.model }}
+    </div>
+  </li>
+  <li class="d-flex flex-row justify-content-between">
+    <label>Name: </label>
+    <div id="name">
+      {{ starship?.name }}
+    </div>
+  </li>
+  <li  class="d-flex flex-row justify-content-between">
+    <label>Cargo Capacity:</label>
+    <div id="cargo-capacity">
+      {{ starship?.cargoCapacity }}
+    </div>
+  </li>
+  <li class="d-flex flex-row justify-content-between">
+    <label>Cost in Credits: </label>
+    <div id="cost-in-credits">
+      {{ starship?.costInCredits }}
+    </div>
+  </li>
+  <li class="d-flex flex-row justify-content-between">
+    <label>Hyperdrive Rating: </label>
+    <div id="hyperdeive-rating">
+      {{ starship?.hyperdriveRating }}
+    </div>
+  </li>
+</ul>
+</app-section>

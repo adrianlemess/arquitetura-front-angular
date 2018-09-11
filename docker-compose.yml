@@ -1,0 +1,30 @@
+version: '3.5'
+services:
+  angular-web-app-dev:
+    container_name: angular-web-app
+    working_dir: /var/www/app
+    build:
+      context: .
+    image: angular-dev:latest
+    volumes:
+      - '.:/var/www/app'
+    ports:
+      - '4200:4200'
+      - '49153:49153'
+    entrypoint: ["npm", "run", "docker"]
+
+  angular-web-app-test:
+    container_name: angular-web-app-test
+    working_dir: /var/www/app
+    build:
+      context: .
+    image: angular-test:latest
+    depends_on:
+      - "angular-web-app-dev"
+    volumes:
+      - '.:/var/www/app'
+    ports:
+      - '9876:9876'
+      - '9875:9875'
+    command: ["npm", "run", "docker:test"]
+

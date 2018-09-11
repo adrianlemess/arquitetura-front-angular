@@ -1,0 +1,39 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/mixins';
+
+@include default-host() {
+  .section {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    border: 0px transparent;
+
+    &-titlePrimary {
+      @include drop-shadow(rgba(0, 0, 0, 0.1));
+      font-size: 2em !important;
+      padding: 10px 0;
+      font-style: italic;
+      margin: 0;
+      color: $primary-title;
+      text-transform: none;
+      font-weight: bold;
+    }
+
+    &-titleSecondary {
+      @include drop-shadow(rgba(0, 0, 0, 0.1));
+      font-size: 1.5em !important;
+      color: $secondary-title;
+      padding: 10px 0;
+      text-transform: none;
+      font-weight: bold;
+    }
+
+    &-content {
+      padding: 10px 0;
+      display: inline-block;
+    }
+  }
+}
+
+
+
